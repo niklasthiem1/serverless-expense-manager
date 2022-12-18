@@ -1,6 +1,7 @@
 import type { AWS } from "@serverless/typescript";
 
 import hello from "@functions/hello";
+import createTodoFn from "@functions/create";
 
 const serverlessConfiguration: AWS = {
   app: "todo",
@@ -42,8 +43,14 @@ const serverlessConfiguration: AWS = {
         Type: "AWS::DynamoDB::Table",
         DeletionPolicy: "Retain",
         Properties: {
-          AttributeDefinitions: [{ AttributeName: "id", AttributeType: "S" }],
-          KeySchema: [{ AttributeName: "id", KeyType: "HASH" }],
+          AttributeDefinitions: [
+            { AttributeName: "id", AttributeType: "S" },
+            { AttributeName: "todo", AttributeType: "S" },
+          ],
+          KeySchema: [
+            { AttributeName: "id", KeyType: "HASH" },
+            { AttributeName: "todo", KeyType: "RANGE" },
+          ],
           ProvisionedThroughput: {
             ReadCapacityUnits: 1,
             WriteCapacityUnits: 1,
@@ -54,7 +61,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello },
+  functions: { hello, createTodoFn },
   package: { individually: true },
   custom: {
     esbuild: {
