@@ -8,7 +8,11 @@ const serverlessConfiguration: AWS = {
   org: "nikcherrypick",
   service: "backend",
   frameworkVersion: "3",
-  plugins: ["serverless-esbuild"],
+  plugins: [
+    "serverless-esbuild",
+    "serverless-offline",
+    "serverless-dynamodb-local",
+  ],
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
@@ -35,6 +39,7 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
+      TODO_TABLE_NAME: "todos",
     },
   },
   resources: {

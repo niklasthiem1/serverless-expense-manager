@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "f2d3158a-9414-455c-af83-9f19b22c3090",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo",
+    "url": "http://localhost:3000/dev/todo",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-12-28T09:38:36.946Z",
+    "modified": "2022-12-28T09:38:36.946Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\"todo\": \"waschen\"}",
+      "form": []
+    },
+    "tests": []
+  }
+]

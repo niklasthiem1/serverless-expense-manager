@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "d87ffa0d-ffd8-40bd-8aa6-8c6e89cc4a74",
+    "colId": "b3b1cae5-5f5f-4706-b639-6d10012669c7",
+    "containerId": "",
+    "name": "LOCAL: create todo",
+    "url": "http://localhost:3000/dev/todo",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-12-28T09:39:05.480Z",
+    "modified": "2022-12-28T09:39:05.480Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\"todo\": \"waschen\"}",
+      "form": []
+    },
+    "tests": []
+  }
+]

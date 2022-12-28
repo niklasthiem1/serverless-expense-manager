@@ -5,3 +5,7 @@ export default {
   },
   required: ["todo"],
 } as const;
+
+export type CreateTodoDto = {
+  todo: string;
+};

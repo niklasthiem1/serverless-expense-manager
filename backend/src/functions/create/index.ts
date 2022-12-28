@@ -1,4 +1,4 @@
-import CreateTodoDto from "./dto";
+import CreateTodoSchema from "./dto";
 import { handlerPath } from "@libs/handler-resolver";
 
 export default {
@@ -10,7 +10,7 @@ export default {
         path: "todo",
         request: {
           schemas: {
-            "application/json": CreateTodoDto,
+            "application/json": CreateTodoSchema,
           },
         },
       },
