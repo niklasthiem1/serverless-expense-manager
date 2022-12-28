@@ -6,6 +6,6 @@ export default {
   required: ["todo"],
 } as const;
 
-export type CreateTodoDto = {
+export type TodoDto = {
   todo: string;
 };

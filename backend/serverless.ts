@@ -2,6 +2,11 @@ import type { AWS } from "@serverless/typescript";
 
 import hello from "@functions/hello";
 import createTodoFn from "@functions/create";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+//TODO env validation
+const env: any = process.env;
 
 const serverlessConfiguration: AWS = {
   app: "todo",
@@ -39,7 +44,9 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
-      TODO_TABLE_NAME: "todos",
+      TODO_TABLE_NAME: env.TODO_TABLE_NAME,
+      DB_LOCAL_REGION: env.DB_LOCAL_REGION,
+      DB_LOCAL_ENDPOINT: env.DB_LOCAL_ENDPOINT,
     },
   },
   resources: {
@@ -60,7 +67,7 @@ const serverlessConfiguration: AWS = {
             ReadCapacityUnits: 1,
             WriteCapacityUnits: 1,
           },
-          TableName: "todos",
+          TableName: env.TODO_TABLE_NAME,
         },
       },
     },
@@ -78,6 +85,15 @@ const serverlessConfiguration: AWS = {
       define: { "require.resolve": undefined },
       platform: "node",
       concurrency: 10,
+    },
+    webpack: {
+      webpackConfig: "./webpack.config.js",
+      includeModules: true,
+    },
+    "serverless-offline": { httpPort: 3000 },
+    dynamodb: {
+      start: { port: 8002, inMemory: true, migrate: true },
+      stages: ["dev"],
     },
   },
 };

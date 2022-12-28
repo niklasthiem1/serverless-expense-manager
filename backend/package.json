@@ -14,14 +14,16 @@
     "@middy/http-json-body-parser": "^3.4.0",
     "aws-sdk": "^2.1277.0",
     "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3",
     "serverless-dotenv-plugin": "^4.0.2",
-    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-webpack": "^5.11.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@serverless/typescript": "^3.0.0",
     "@types/aws-lambda": "^8.10.71",
-    "@types/node": "^14.14.25",
+    "@types/node": "^14.18.36",
     "esbuild": "^0.14.11",
     "json-schema-to-ts": "^1.5.0",
     "serverless": "^3.0.0",
