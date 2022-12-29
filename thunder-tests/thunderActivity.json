@@ -8,14 +8,28 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-12-28T09:38:36.946Z",
-    "modified": "2022-12-28T09:38:36.946Z",
+    "modified": "2022-12-29T10:33:56.494Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\"todo\": \"waschen\"}",
+      "raw": "{\"todo\": \"kochen\"}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "4a8c457c-8067-442c-ab16-4b3325263b88",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo",
+    "url": "http://localhost:3000/dev/todo",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-29T15:21:15.554Z",
+    "modified": "2022-12-29T15:21:15.554Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
