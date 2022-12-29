@@ -2,10 +2,11 @@ import type { AWS } from "@serverless/typescript";
 
 import hello from "@functions/hello";
 import createTodoFn from "@functions/create";
+import getTodosFn from "@functions/get";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-//TODO env validation
+//FIXME env validation
 const env: any = process.env;
 
 const serverlessConfiguration: AWS = {
@@ -73,7 +74,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello, createTodoFn },
+  functions: { hello, createTodoFn, getTodosFn },
   package: { individually: true },
   custom: {
     esbuild: {

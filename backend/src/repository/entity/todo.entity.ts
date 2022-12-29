@@ -1,5 +1,5 @@
 export type TodoEntity = {
-  id: number;
+  id: string;
   todo: string;
   updatedAt?: string;
 };
