@@ -13,13 +13,13 @@ Frontend:
 - Typescript :page_facing_up:
 
 Backend:
-- Serverless Framework :page_facing_up:
+- Serverless Framework :bricks:
 - Typescript :page_facing_up:
 - DynamoDB :card_file_box:
 - Lambda :leo:
 
 Infra:
-- Serverless Framework (Cloudformation) :bricks:
+- Serverless Framework/Cloudformation :bricks:
 
 ### Todos
 
