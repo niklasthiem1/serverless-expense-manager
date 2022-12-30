@@ -15,6 +15,7 @@
     "aws-sdk": "^2.1277.0",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
+    "joi": "^17.7.0",
     "serverless-dotenv-plugin": "^4.0.2",
     "serverless-dynamodb-local": "^0.2.30",
     "serverless-webpack": "^5.11.0",

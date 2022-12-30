@@ -4,10 +4,14 @@ import createTodoFn from "@functions/create";
 import deleteTodoFn from "@functions/delete";
 import getTodosFn from "@functions/get";
 import * as dotenv from "dotenv";
-dotenv.config();
+import { validateEnv } from "@libs/validate/env-validator";
+
+dotenv.config({ override: true });
 
 //FIXME env validation
-const env: any = process.env;
+const env = process.env;
+
+validateEnv(env);
 
 const serverlessConfiguration: AWS = {
   app: "backend",
@@ -68,7 +72,6 @@ const serverlessConfiguration: AWS = {
       },
     },
   },
-  // import the function via paths
   functions: { createTodoFn, getTodosFn, deleteTodoFn },
   package: { individually: true },
   custom: {

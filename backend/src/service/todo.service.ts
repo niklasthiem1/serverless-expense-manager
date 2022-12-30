@@ -27,7 +27,6 @@ export class TodoService {
       todo,
       updatedAt: dayjs().format(isoVerbose),
     };
-    console.log(entity);
 
     return await this.repository.createTodo(entity);
   }
