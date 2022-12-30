@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import { useGetAllTodos } from "./api/todo/todo-api.service";
 
 function App() {
   const [todo, setTodo] = useState<string>("");
   const [submissions, setSubmission] = useState<string[]>([]);
+  const { data, isLoading } = useGetAllTodos();
 
   const handleChangeTodo = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTodo(event.target.value);
