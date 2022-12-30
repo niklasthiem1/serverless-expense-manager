@@ -1,7 +1,7 @@
 import type { AWS } from "@serverless/typescript";
 
-import hello from "@functions/hello";
 import createTodoFn from "@functions/create";
+import deleteTodoFn from "@functions/delete";
 import getTodosFn from "@functions/get";
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -10,7 +10,7 @@ dotenv.config();
 const env: any = process.env;
 
 const serverlessConfiguration: AWS = {
-  app: "todo",
+  app: "backend",
   org: "nikcherrypick",
   service: "backend",
   frameworkVersion: "3",
@@ -48,6 +48,7 @@ const serverlessConfiguration: AWS = {
       TODO_TABLE_NAME: env.TODO_TABLE_NAME,
       DB_LOCAL_REGION: env.DB_LOCAL_REGION,
       DB_LOCAL_ENDPOINT: env.DB_LOCAL_ENDPOINT,
+      IS_OFFLINE: env.IS_OFFLINE,
     },
   },
   resources: {
@@ -56,14 +57,8 @@ const serverlessConfiguration: AWS = {
         Type: "AWS::DynamoDB::Table",
         DeletionPolicy: "Retain",
         Properties: {
-          AttributeDefinitions: [
-            { AttributeName: "id", AttributeType: "S" },
-            { AttributeName: "todo", AttributeType: "S" },
-          ],
-          KeySchema: [
-            { AttributeName: "id", KeyType: "HASH" },
-            { AttributeName: "todo", KeyType: "RANGE" },
-          ],
+          AttributeDefinitions: [{ AttributeName: "id", AttributeType: "S" }],
+          KeySchema: [{ AttributeName: "id", KeyType: "HASH" }],
           ProvisionedThroughput: {
             ReadCapacityUnits: 1,
             WriteCapacityUnits: 1,
@@ -74,7 +69,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello, createTodoFn, getTodosFn },
+  functions: { createTodoFn, getTodosFn, deleteTodoFn },
   package: { individually: true },
   custom: {
     esbuild: {

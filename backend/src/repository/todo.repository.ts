@@ -28,10 +28,11 @@ export class TodoRepository {
   }
 
   async deleteTodoById(id: string) {
-    return this.dynamoDbClient
+    console.log(id);
+    return await this.dynamoDbClient
       .delete({
         TableName: this.tableName,
-        Key: { id: id },
+        Key: { id },
       })
       .promise();
   }
