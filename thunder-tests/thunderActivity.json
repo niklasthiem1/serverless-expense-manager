@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-12-28T09:38:36.946Z",
-    "modified": "2022-12-29T10:33:56.494Z",
+    "modified": "2022-12-30T08:32:10.378Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\"todo\": \"kochen\"}",
+      "raw": "{\"todo\": \"valo\"}",
       "form": []
     },
     "tests": []
@@ -28,6 +28,88 @@
     "sortNum": 0,
     "created": "2022-12-29T15:21:15.554Z",
     "modified": "2022-12-29T15:21:15.554Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c04f3f8e-967d-41d0-b92e-4978c9682bf0",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo?id=1",
+    "url": "http://localhost:3000/dev/todo?id=1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-12-29T17:52:50.289Z",
+    "modified": "2022-12-29T17:52:50.289Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "5b883fae-2f38-4d38-9592-426eac501033",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo?test=1",
+    "url": "http://localhost:3000/dev/todo?test=1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-12-29T17:53:05.497Z",
+    "modified": "2022-12-29T17:53:05.497Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "test",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "a0d4e47f-a68e-4d3b-9f05-6ef1d0aaff2e",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo/1",
+    "url": "http://localhost:3000/dev/todo/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-12-29T17:53:32.350Z",
+    "modified": "2022-12-29T17:53:32.350Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "13be59e1-abcb-41bc-b701-a2ac77967b5a",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo/0b5eec70-87a4-11ed-b3c1-a10f4cfb51f4",
+    "url": "http://localhost:3000/dev/todo",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-12-29T18:13:10.980Z",
+    "modified": "2022-12-30T08:23:23.729Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d35934cf-6d2c-4b1b-b931-250eaf268755",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/dev/todo/0b5eec70-87a4-11ed-b3c1-a10f4cfb51f4",
+    "url": "http://localhost:3000/dev/todo/73ebd2d0-881c-11ed-b707-fbe51febe52f",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-12-29T18:13:20.939Z",
+    "modified": "2022-12-30T08:32:53.379Z",
     "headers": [],
     "params": [],
     "tests": []

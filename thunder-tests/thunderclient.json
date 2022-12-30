@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-12-28T09:39:05.480Z",
-    "modified": "2022-12-29T15:28:36.950Z",
+    "modified": "2022-12-29T18:35:25.584Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\"todo\": \"putzen\"}",
+      "raw": "{\"todo\": \"ziggeln\"}",
       "form": []
     },
     "tests": []
@@ -28,6 +28,20 @@
     "sortNum": 20000,
     "created": "2022-12-29T15:37:28.499Z",
     "modified": "2022-12-29T15:37:28.499Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "55517e6e-ee8b-465e-a103-d1235cf78c63",
+    "colId": "b3b1cae5-5f5f-4706-b639-6d10012669c7",
+    "containerId": "",
+    "name": "LOCAL: delete todo by id",
+    "url": "http://localhost:3000/dev/todo/8580eaa0-87a7-11ed-9760-55e923838117",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2022-12-29T18:13:52.425Z",
+    "modified": "2022-12-29T18:35:48.368Z",
     "headers": [],
     "params": [],
     "tests": []
