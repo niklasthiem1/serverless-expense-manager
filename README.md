@@ -1,28 +1,25 @@
 # serverless-expense-manager
 # <p align="center">**Expense Manager (WIP)**</p>
 
-Free Time Project trying out serverless framework on AWS
+Free Time Project trying out serverless framework on AWS :cloud:
 
 > I built this only on weekends and sometimes evenings
-## What's For
-
-This app is an implementation of React with Supabase, simply have Authentication and CRUD operation.
 
 ### Stack
 Frontend:
 - Vite ⚡
 - React ⚛️
 - TailwindCSS 💨
+- Typescript :page_facing_up:
 
 Backend:
 - Serverless Framework :page_facing_up:
 - Typescript :page_facing_up:
-- AWS
-- DynamoDB
-- Lambda
+- DynamoDB :card_file_box:
+- Lambda :leo:
 
 Infra:
-- Serverless Framework (Cloudformation)
+- Serverless Framework (Cloudformation) :bricks:
 
 ### Todos
 
