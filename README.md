@@ -3,7 +3,6 @@
 
 Free Time Project trying out serverless framework on AWS :cloud:
 
-> I built this only on weekends and sometimes evenings
 
 ### Stack
 Frontend:
