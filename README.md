@@ -3,8 +3,7 @@
 
 Free Time Project trying out serverless framework on AWS
 
-> I built this only on weekend and sometimes at night to spend my **lonely** time as a Frontend Developer
-
+> I built this only on weekends and sometimes evenings
 ## What's For
 
 This app is an implementation of React with Supabase, simply have Authentication and CRUD operation.
