@@ -15,8 +15,8 @@ Frontend:
 - TailwindCSS 💨
 
 Backend:
-- Serverless Framework 
-- Typescript
+- Serverless Framework :page_facing_up:
+- Typescript :page_facing_up:
 - AWS
 - DynamoDB
 - Lambda
