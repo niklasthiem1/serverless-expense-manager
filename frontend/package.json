@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^4.3.4",
     "@types/axios": "^0.14.0",
+    "aws-amplify": "^5.0.11",
     "axios": "^1.2.2",
     "js-cookie": "^3.0.1",
     "react": "^18.2.0",

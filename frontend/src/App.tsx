@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { useGetAllTodos } from "./api/todo/todo-api.service";
+import { Amplify } from "aws-amplify";
+import awsConfig from "./aws-exports.js";
+import { withAuthenticator } from "@aws-amplify/ui-react";
+
+Amplify.configure(awsConfig);
 
 function App() {
   const [todo, setTodo] = useState<string>("");
@@ -14,6 +19,9 @@ function App() {
   const handleSubmitTodo = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
+    if (todo.length <= 0) {
+      return;
+    }
     setSubmission([...submissions, todo]);
     setTodo("");
   };
@@ -64,4 +72,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

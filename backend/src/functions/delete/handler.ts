@@ -8,7 +8,6 @@ const deleteTodo = async (event): Promise<APIGatewayProxyResult> => {
   const todoService = new TodoService();
   const deleteId = event.pathParameters.todoId;
 
-  console.log(deleteId);
   await todoService.deleteTodo(deleteId);
 
   return formatJSONResponse(HttpStatus.SUCCESS, {
