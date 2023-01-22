@@ -2,9 +2,6 @@
 
 # <p align="center">**Expense Manager (WIP)**</p>
 
-Free Time Project trying out serverless framework on AWS
-
-# <p align="center">**Expense Manager (WIP)**</p>
 
 Free Time Project trying out serverless framework on AWS :cloud:
 
